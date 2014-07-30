@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.37, for Linux (i686)
 --
--- Host: localhost    Database: adpmxcom_sb
+-- Host: localhost    Database: adpmxcom_sb_dev
 -- ------------------------------------------------------
 -- Server version	5.5.37-cll
 
