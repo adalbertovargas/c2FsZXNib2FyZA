@@ -497,10 +497,3 @@ function getHistory($oportunidad){
 
 }
 
-
-
-
-
-
-
-?>

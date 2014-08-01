@@ -27,7 +27,7 @@ $uid=Auth::user()->id;
 <div class="row">
             <!-- easypiechart -->
 
-                        <div class="col-xs-4">
+                        <div class="col-lg-6">
               <section class="panel">
                 <header class="panel-heading bg-white">
                   <div class="text-center h5"><strong>PC/Prospecto</strong></div>
@@ -43,7 +43,7 @@ $uid=Auth::user()->id;
               </section>
             </div>
 
-            <div class="col-xs-4">              
+            <div class="col-lg-6">              
               <section class="panel">
                 <header class="panel-heading bg-white">
                   <div class="text-center h5"><strong>Proporcion Ventas</strong></div>
@@ -68,67 +68,57 @@ $uid=Auth::user()->id;
               </section>
             </div>
 
-                        <div class="col-xs-4">
-              <section class="panel">
-                <header class="panel-heading bg-white">
-                  <div class="text-center h5"><strong>Cierres Probables</strong></div>
-                </header>
-                <div class="panel-body pull-in text-center">
-                  <div class="inline">
-                    <div class="easypiechart easyPieChart" data-percent="{{pc_prospecto($uid)}}" data-bar-color="#95e98b" style="width: 160px; height: 160px; line-height: 160px;">
-                      <span class="h2" style="margin-left:10px;margin-top:10px;display:inline-block">{{cierres_probables($uid)}}</span>&nbsp;
-                      <div class="easypie-text text-muted">Cierres</div>
-                    <canvas width="160" height="160"></canvas></div>
-                  </div>
-                </div>
-              </section>
-            </div>
+                       
 
             <!-- easypiechart end-->
           </div>
-<div class="row">
-
-
-      <div class="col-md-12">
+          
+          
+          <div class="row">
+        <div class="col-md-12">
           <section class="panel">
-            <header class="panel-heading bg-white"><div class="text-center h5">Historial de Oportunidades por columna</div></header>
-<div class="panel-body">
-
-
-              <div class="media m-t-none">
-                <div class="pull-left media-small">Paso 1</div>
-                <div class="progress bg-light">
-                  <div class="progress-bar bg-info" style="width: {{porcentaje_totales($uid,1)}}%">
-                    {{oportunidades_paso_totales($uid,1)}}  {{--oportunidades_cerradas_paso($uid,1)--}}</div>
-                </div>
-              </div>
-              <div class="media m-t-none">
-                <div class="pull-left media-small">Paso 2</div>
-                <div class="progress bg-light">
-                  <div class="progress-bar bg-info" style="width: {{porcentaje_totales($uid,2)}}%">
-                    {{oportunidades_paso_totales($uid,2)}}  {{--oportunidades_cerradas_paso($uid,2)--}}</div>
-                </div>
-              </div>
-              <div class="media m-t-none">
-                <div class="pull-left media-small">Paso 3</div>
-                <div class="progress bg-light">
-                  <div class="progress-bar bg-info" style="width: {{porcentaje_totales($uid,3)}}%">
-                    {{oportunidades_paso_totales($uid,3)}}  {{--oportunidades_cerradas_paso($uid,3)--}}</div>
-                </div>
-              </div>
-              <div class="media m-t-none">
-                <div class="pull-left media-small">Cierre</div>
-                <div class="progress bg-light">
-                  <div class="progress-bar bg-success" style="width: {{porcentaje_totales($uid,4)}}%">
-                    {{oportunidades_paso_totales($uid,4)}}  {{--oportunidades_cerradas_paso($uid,3)--}}</div>
-                </div>
-              </div>
-
+            <header class="panel-heading">
+             <div class="text-center h5">Historial de Oportunidades por columna </div>           </header>
+            <div>
+              <table class="table table-striped m-b-none text-small">
+                <thead>
+                  <tr>
+                    <th>Paso</th>
+                    <th>No. de Oportunidades</th>                    
+                                     </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                  <td>Paso 1 </td>
+                  <td><span class="badge bg-info">{{oportunidades_paso_totales($uid,1)}}  {{--oportunidades_cerradas_paso($uid,1)--}}</span></td>
+                 
+                  </tr>    
+                  <tr> 
+                  <td>Paso 2 </td>
+                  <td><span class="badge bg-info"> {{oportunidades_paso_totales($uid,2)}}  {{--oportunidades_cerradas_paso($uid,2)--}}</span></td>
+                 
+                  </tr>  
+                  <tr> 
+                  <td>Paso 3</td>
+                  <td><span class="badge bg-info"> {{oportunidades_paso_totales($uid,3)}}  {{--oportunidades_cerradas_paso($uid,3)--}}</span></td>
+                 
+                  </tr>  
+                  <tr> 
+                  <td>Cierre </td>
+                  <td><span class="badge bg-success">{{oportunidades_paso_totales($uid,4)}}  {{--oportunidades_cerradas_paso($uid,3)--}}</span></td>
+                 
+                  </tr>                 
+     
+                </tbody>
+              </table>
             </div>
           </section>
         </div>
+        
+      </div>
+          
+          
 
-</div>
 
 
 @stop

@@ -78,12 +78,18 @@ App::down(function()
 |
 */
 
+/*
 App::missing(function($exception){
   return Response::make("Page not found", 404);
 });
 
-
+*/
 
 require app_path().'/filters.php';
+
+/**
+ * Load external functions
+ * Caution: Uncoment it before using Artisan
+ */
 
 require_once app_path().'/helpers.php';

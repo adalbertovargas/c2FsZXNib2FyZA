@@ -28,7 +28,7 @@ $uid=Auth::user()->id;
 
           <section class="panel">
             <div class="panel-body">
-              Total {{{oportunidades_activas($uid)}}} Oportunidades, {{{oportunidades_cerradas($uid)}}} Cerradas
+              <!--Total {{{oportunidades_activas($uid)}}} Oportunidades, {{{oportunidades_cerradas($uid)}}} Cerradas-->
               <span class="badge bg-danger pull-right">Ciclo de Ventas = 
                 @if(ciclo_ventas($uid)>0)
                 {{{ciclo_ventas($uid)}}} dias
