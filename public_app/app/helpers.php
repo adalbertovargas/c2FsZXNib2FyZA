@@ -1,4 +1,4 @@
-<?
+<?php
 
 //APP FUNCTIONS
 
@@ -288,7 +288,7 @@ function cuenta_dias($fecha){
 
 
 
-///////////////////TOOLS FUNCTIONS
+//TOOLS FUNCTIONS
 
 function nicetime($date)
 {

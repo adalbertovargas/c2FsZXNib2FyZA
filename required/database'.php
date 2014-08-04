@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'adp_sbt',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'adpmxcom_sb_dev',
+			'username'  => 'adpmxcom_sb_dev',
+			'password'  => 'adp2013mexico',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

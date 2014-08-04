@@ -1,0 +1,26 @@
+Mapeo de aplicación
+
+Metodo  Ruta 								Descripción
+======  =================================== ===================================
+
+GET 	admin/ 								Redirige a login
+GET		admin/login							Acceso admin
+
+GET 	admin/usuarios 						Muestra todos los usuarios
+GET 	admin/usuarios/:id 					Vista de usuario individual
+GET 	admin/usuarios/create 				Formulario para crear nuevo usuario
+POST 	admin/usuarios 						Acción de crear nuevo usuario
+GET 	admin/usuarios/:id/edit 			Formulario para editar usuario existente
+PUT 	admin/usuarios/:id 					Acción de actualizar datos de usuario
+GET 	admin/usuarios/:id/delete 			Formulario para confirmar eliminar usuario
+DELETE 	admin/usuarios/:id 					Acción de eliminar usuario
+
+GET 	admin/empresas 						Muestra todas las empresas
+GET 	admin/empresas/:id 					Vista de empresa individual
+GET 	admin/empresas/create 				Formulario para crear nueva empresa
+POST 	admin/empresas 						Acción de crear nueva empresa
+GET 	admin/empresas/:id/edit 			Formulario para editar empresa existente
+PUT 	admin/empresas/:id 					Acción de actualizar datos de empresa
+GET 	admin/empresas/:id/delete 			Formulario para confirmar eliminar empresa
+DELETE 	admin/empresas/:id 					Acción de eliminar empresa
+PUT		usuarios/:id 						Acción de cambio de contraseña

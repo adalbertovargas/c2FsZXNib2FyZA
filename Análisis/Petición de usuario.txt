@@ -1,0 +1,23 @@
+Proyecto Salesboard:
+
+Crear la parte administrativa que maneja
+
+- Empresas
+- Usuarios y Niveles de Acceso
+
+
+Debe de ser compatible con un sistema de hasta 4 Niveles
+donde Cada nivel puede VER lo que esta debajo de El.
+
+Director General
+- Director de Ventas
+-- Gerente
+---- Vendedores
+
+Pantallas 
+- Recuperar Password
+- Perfil (editar perfil)
+- Crear Nuevo Usuario (Admin)
+-- Puede crear admin, gerente, vendedor.
+-- Crear Nueva Empresa
+-Pantalla del Gerente

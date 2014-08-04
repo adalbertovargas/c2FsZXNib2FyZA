@@ -1,7 +1,20 @@
 <?php
 
+
+
+
+
+
 Route::model('oportunidad','Oportunidad');
 
+
+		Route::get('login',function(){
+
+			return View::make('login');
+
+		});
+
+		
 View::composer('oportunidades.edit', function($view)
 {
   $usuarios = Usuario::all();
@@ -9,38 +22,10 @@ View::composer('oportunidades.edit', function($view)
   $view->with('usuario_options', $usuario_options);
 });
 
-
 Route::get('/', function(){
   return Redirect::to('oportunidades');
 });
 
-/*
- * Muestra vista "nuevo/usuario" al acceder a url/administrador
- */
-
-/* Working
-Route::get('administrador', function()
-{
-	return View::make('usuarios.nuevo')->with('','');
-
-});
-*/
-Route::get('usuarios', function() {
-	$cat = new Usuario;
- 	return View::make('usuarios.nuevo')
- 	->with('method', 'post');
-});
-
-/* Not working
-
- * Guarda datos recibidos de vista "nuevo usuario"
- 
-
-	Route::post('administrador',function(){
-
-
-	}
-*/
 Route::get('about',function(){
 	return View::make('about')->with('number_of_oportunidades',9000);
 });
@@ -51,9 +36,7 @@ Route::group(array('before'=>'auth'), function(){
 
 
 	Route::get('oportunidades',function(){
-
-			$oportunidades=Oportunidad::
-			where('visible','=','1')->
+			$oportunidades=Oportunidad::where('visible','=','1')->
 			where('usuario_id','=',Auth::user()->id)
 			->orderBy('estado_actual', 'ASC')->orderBy('fecha_inicio', 'ASC')->get(); //AGREGAR ORDENAR COMO SEGUNDO CRITERIO POR FECHA DE INICIO
 			return View::make('oportunidades.index')
@@ -242,11 +225,7 @@ Route::group(array('before'=>'auth'), function(){
 
 
 
-		Route::get('login',function(){
 
-			return View::make('login');
-
-		});
 
 
 

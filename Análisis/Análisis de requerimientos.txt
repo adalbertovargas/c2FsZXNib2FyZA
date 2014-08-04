@@ -1,0 +1,117 @@
+SALESBOARD | Análisis del sistema
+=================================
+adpmx.com/salesboard/public
+
+ENTIDADES:
+
+Programar módulos para gestión de:
+- Empresas
+- Usuarios
+
+Entidades a postponer:
+
+ENTIDAD 					NOMBRE CLAVE
+=========================== ==============
+Datos de facturación 		datos_facts
+Pagos 						pagos
+Facturas 					facturas
+
+
+Sistema en el que para los usuarios EXISTEN 4 niveles de acceso:
+
+#	USUARIO
+=== ======================	
+4	Director General
+3	Director de Ventas
+2	Gerente
+1	Vendedores
+0	Administrador
+
+
+
+TAREAS					USUARIO FACULTADO
+======================= ===================
+Recuperar Password		Todos
+Editar perfil			Admin
+Crear nuevo usuario 	Admin
+Crear nueva empresa 	Admin
+
+
+Se asume lo siguiente:
+
+1. El ADMINISTRADOR posee CONTROL TOTAL.
+2. Un VENDEDOR PUEDE o NO PERTENECER a una EMPRESA.
+4. Un GERENTE DEBE tener 1 o más VENDEDORES y puede tener sólo 1  DIRECTOR DE VENTAS.
+5. Un DIRECTOR DE VENTAS DEBE tener 1 o más GERENTES con 1 o más VENDEDORES a su vez pero PUEDE tener sólo un DIRECTOR GENERAL.
+6. Un DIECTOR GENERAL DEBE TENER  por lo menos un director de ventas, un gerente y un vendedor.
+7. Tanto GERENTE, DIRECTOR DE VENTAS como DIRECTOR GENERAL, deben pertenecer a una empresa.
+8. Los usuarios que pertenezcan a una empresa NO DEBEN pertenecar a otra.
+
+
+Entidades del sistema:
+
+usuarios
+==========
+#id
+nombre 
+apellidos
+email
+pwd_hash
+usr_tipo
+usr_superior
+cookie_token
+activo
+created_at
+updated_at
+----------------
+oportunidads_id
+activacions_id
+empresa_id
+
+
+activacions
+============
+#id
+activ_hash
+-----------
+usuarios_id
+
+
+empresas
+===========
+#id
+nombre_com
+razon_social
+usr_supremo
+------------
+- - -
+
+
+oportunidads
+=============
+#id
+nombre
+detalle
+fecha_inicio
+fecha_final
+estado_actual
+cantidad
+visible
+creted_at
+updated_at
+============
+- - -
+
+
+cambios
+===========
+id
+estado_antes
+estado_actual
+fecha_cambio
+comentario
+created_at
+updated_at
+-------------
+oportunidads_id
+
