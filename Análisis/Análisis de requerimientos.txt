@@ -1,6 +1,6 @@
 SALESBOARD | Análisis del sistema
 =================================
-adpmx.com/salesboard/public
+adpmx.com/salesboard/public/admin
 
 ENTIDADES:
 
@@ -21,10 +21,11 @@ Sistema en el que para los usuarios EXISTEN 4 niveles de acceso:
 
 #	USUARIO
 === ======================	
-4	Director General
-3	Director de Ventas
-2	Gerente
-1	Vendedores
+5	Director General
+4	Director de Ventas
+3	Gerente
+2	Vendedor de empresa
+1	Vendedor independiente
 0	Administrador
 
 
@@ -53,11 +54,11 @@ Entidades del sistema:
 usuarios
 ==========
 #id
-nombre 
-apellidos
+apodo | username
+nombre
 email
-pwd_hash
-usr_tipo
+pwd_hash | password
+usr_tipo | is_admin
 usr_superior
 cookie_token
 activo
@@ -74,7 +75,7 @@ activacions
 #id
 activ_hash
 -----------
-usuarios_id
+- - -
 
 
 empresas
@@ -83,6 +84,8 @@ empresas
 nombre_com
 razon_social
 usr_supremo
+created_at
+updated_at
 ------------
 - - -
 

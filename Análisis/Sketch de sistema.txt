@@ -23,4 +23,5 @@ GET 	admin/empresas/:id/edit 			Formulario para editar empresa existente
 PUT 	admin/empresas/:id 					Acción de actualizar datos de empresa
 GET 	admin/empresas/:id/delete 			Formulario para confirmar eliminar empresa
 DELETE 	admin/empresas/:id 					Acción de eliminar empresa
+
 PUT		usuarios/:id 						Acción de cambio de contraseña
